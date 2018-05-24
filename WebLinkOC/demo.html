@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=100%,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<title>标题</title>
+	<script type="text/javascript">
+		function showName(para) {
+			document.getElementById('pname').innerHTML = para;
+		}
+		function linkTest() {
+             window.webkit.messageHandlers.linkTest.postMessage(null);
+		}
+        function testbtn() {
+            window.webkit.messageHandlers.testbtn.postMessage(null);
+        }
+        function showAlert() {
+        	alert('字符串', 'cancel', 'sure')
+        }
+	</script>
+</head>
+<body>
+	<div>
+		<p id="pname">name</p>
+		<button id="testbtn" onclick="testbtn()">testbtn</button>
+		<button id="testargbtn" onclick="testargbtn(123)">testargbtn</button>
+        <button id="linkBtn" onclick="linkTest()">2112323</button>
+        <button id="alert" onclick="showAlert()">showAlert</button>
+	</div>
+</body>
+</html>
